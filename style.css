@@ -1,0 +1,25 @@
+
+/*.foto{
+    position: static; 
+    top: 130px; 
+    left: 2500px; 
+}*/
+.datos_Personales { 
+ /*   height: 10px;
+    width: 300px;
+    position: absolute; 
+    top: 30px; 
+    right: 100px;*/
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 500;
+}
+.formacion_Academica{
+    margin-top: 10px;
+    margin-right: auto;
+    padding: 30px;
+    border: 5px;
+    border-style: solid;
+    /*height: 100px;
+    width: 300px;*/
+}
