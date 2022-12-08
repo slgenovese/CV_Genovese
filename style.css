@@ -1,7 +1,16 @@
 
 
-font_Redes{
+.font_Redes{
     font-size: small;
+}
+.subtitulo{
+    margin-top: 50px;
+}
+.article_Experiencia{
+    font-size: medium;
+}
+.separador{
+    margin-top: 50px;
 }
 .datos_Personales { 
     margin-top: 20px;
