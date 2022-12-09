@@ -9,8 +9,11 @@
 .article_Experiencia{
     font-size: medium;
 }
-.separador{
-    margin-top: 50px;
+.article_Educacion{
+    font-size: medium;
+}
+#separador{
+    margin-top: 20px;
 }
 .datos_Personales { 
     margin-top: 20px;
