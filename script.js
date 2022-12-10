@@ -1,29 +1,68 @@
-src="https://d3js.org/d3.v4.min.js";
-src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js";
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
-src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js";
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js";
 
-var chart = bb.generate({
-    data: {
-      columns: [
-        ["Blue", 2],
-        ["orange", 4],
-        ["green", 3],
-      ],
-      type: "donut",
-      onclick: function (d, i) {
-        console.log("onclick", d, i);
-      },
-      onover: function (d, i) {
-        console.log("onover", d, i);
-      },
-      onout: function (d, i) {
-        console.log("onout", d, i);
-      },
+
+function graficos(){
+// Las etiquetas son las porciones de la gráfica
+var etiquetas = ["C/C++", "VB/.Net","Assembler","HTML/CSS/JavaScript"]
+// Podemos tener varios conjuntos de datos. Comencemos con uno
+var titulo ="Lenguajes de Programación"
+var datosIngresos = {
+  data: [35, 35, 10, 15], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+  // Ahora debería haber tantos background colors como datos, es decir, para este ejemplo, 4
+  backgroundColor: [
+    'red',
+    'green',
+    'blue',
+    'orange',
+],// Color de fondo
+  borderColor: [
+    'red',
+    'green',
+    'blue',
+    'orange',
+],// Color del borde
+  borderWidth: 0,// Ancho del borde
+};
+grafico_Donut(datosIngresos, etiquetas, "#donut-chart1");
+
+// Las etiquetas son las porciones de la gráfica
+var etiquetas = ["Escritura", "Hablado","Lectura"]
+// Podemos tener varios conjuntos de datos. Comencemos con uno
+var titulo ="Ingles Técnico"
+var datosIngresos = {
+  data: [10, 10, 80], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+  // Ahora debería haber tantos background colors como datos, es decir, para este ejemplo, 4
+  backgroundColor: [
+    'red',
+    'green',
+    'blue',
+],// Color de fondo
+  borderColor: [
+    'red',
+    'green',
+    'blue',
+],// Color del borde
+  borderWidth: 0,// Ancho del borde
+};
+grafico_Donut(datosIngresos, etiquetas,"#donut-chart2");
+};
+
+
+
+
+function grafico_Donut(datosIngresos, etiquetas, objeto){
+// Obtener una referencia al elemento canvas del DOM
+var $donut = document.querySelector(objeto);
+
+new Chart ($donut,{
+  type: 'doughnut',// Tipo de gráfica. Puede ser doughnut o pie
+  data: {
+    datasets: [
+          datosIngresos,
+          // Aquí más datos...
+        ],
+        label: 'titulo',
+        labels: etiquetas,
     },
-    donut: {
-      title: "70",
-    },
-    bindto: "#donut-chart",
-  });
+});
+
+};
