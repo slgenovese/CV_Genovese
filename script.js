@@ -22,7 +22,7 @@ var datosIngresos = {
 ],// Color del borde
   borderWidth: 0,// Ancho del borde
 };
-grafico_Donut(datosIngresos, etiquetas, "#donut-chart1");
+grafico_Donut(datosIngresos, etiquetas, titulo, "#donut-chart1");
 
 // Las etiquetas son las porciones de la gráfica
 var etiquetas = ["Escritura", "Hablado","Lectura"]
@@ -43,13 +43,13 @@ var datosIngresos = {
 ],// Color del borde
   borderWidth: 0,// Ancho del borde
 };
-grafico_Donut(datosIngresos, etiquetas,"#donut-chart2");
+grafico_Donut(datosIngresos, etiquetas, titulo, "#donut-chart2");
 };
 
 
 
 
-function grafico_Donut(datosIngresos, etiquetas, objeto){
+function grafico_Donut(datosIngresos, etiquetas, titulo, objeto){
 // Obtener una referencia al elemento canvas del DOM
 var $donut = document.querySelector(objeto);
 
@@ -60,9 +60,19 @@ new Chart ($donut,{
           datosIngresos,
           // Aquí más datos...
         ],
-        label: 'titulo',
         labels: etiquetas,
     },
-});
+    options: {
+      title: {
+          display: true,
+          text: titulo,
+      },
+      legend: {
+        position: "left",
+      },
+
+  },
+
+  });
 
 };
