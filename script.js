@@ -44,6 +44,8 @@ var datosIngresos = {
   borderWidth: 0,// Ancho del borde
 };
 grafico_Donut(datosIngresos, etiquetas, titulo, "#donut-chart2");
+datos();
+ocultar_Botones()
 };
 
 
@@ -84,7 +86,23 @@ function verificar_Mail_Clave(){
   var $mail = document.getElementById('correo');
   var $clave = document.getElementById('palabraSecreta');
   if($clave.value=='42247476' && $mail.value=='sgenovese@gmail.com'){
-    graficos();
-  } else{
-  }
-}
+    mostrar_Botones();
+  } 
+};
+
+function datos(){
+  var acerca_De ="Técnico Universitario en Automatización y Control, Informático, Docente, MCP, CCNA, Full Stack Developer Jr.";
+  var $acerca_De =document.getElementById('acerca_De');
+  $acerca_De.innerText=acerca_De;
+};
+
+function ocultar_Botones(){
+  document.getElementById('edicion_Acerca_De').style.display='none';
+  document.getElementById('borrado_Acerca_De').style.display='none';
+};
+
+function mostrar_Botones(){
+  document.getElementById('edicion_Acerca_De').style.display='inline';
+  document.getElementById('borrado_Acerca_De').style.display='inline';
+
+};
