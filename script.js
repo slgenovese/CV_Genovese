@@ -45,7 +45,8 @@ var datosIngresos = {
 };
 grafico_Donut(datosIngresos, etiquetas, titulo, "#donut-chart2");
 datos();
-ocultar_Botones();
+if (document.getElementById('btn_Login').textContent == ''){document.getElementById('btn_Login').innerText="Login"};
+if (document.getElementById('btn_Login').textContent == 'Login'){ ocultar_Botones()};
 iniciar_Lista();
 };
 
@@ -87,6 +88,9 @@ function verificar_Mail_Clave(){
   var $mail = document.getElementById('correo');
   var $clave = document.getElementById('palabraSecreta');
   if($clave.value=='42247476' && $mail.value=='sgenovese@gmail.com'){
+    //document.getElementById('Login').style.display="none";
+    document.getElementsById('login').style.display="none";
+    document.getElementById('btn_Login').innerText="Logout";
     mostrar_Botones();
   } 
 };
@@ -104,6 +108,7 @@ function ocultar_Botones(){
   for(i=0;i<9;i++){
     document.getElementById('btnBorrado_'+i).style.display='none';
   }
+  //boton_Login()
 };
 
 function mostrar_Botones(){
@@ -113,6 +118,7 @@ function mostrar_Botones(){
   for(i=0;i<9;i++){
     document.getElementById('btnBorrado_'+i).style.display='inline';
   }
+  //boton_Login()
 };
 function iniciar_Lista(){
   let experiencia=[{
@@ -176,5 +182,14 @@ for (i=0;i<4; i++){
   document.getElementById('edu_imagen_'+i).setAttribute("src",educacion[i].imagen );
   document.getElementById('edu_texto_'+i).innerHTML=educacion[i].institucion + educacion[i].titulo + educacion[i].periodo;
 }
+};
 
+function boton_Login(){
+  if(document.getElementById('btn_Login').textContent == 'Login'){
+    document.getElementById('login').style.display="block";
+
+    //data-bs-toggle="modal" data-bs-target="#login"
+  }else{
+    document.getElementById('btn_Login').innerText="Login";
+  }
 };

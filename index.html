@@ -41,9 +41,8 @@
                     </button>
                 </div>
                 <div class="col-1">
-                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#login">
-                        Login
-                      </button>                    
+                    <button id="btn_Login" onclick="boton_Login()" type="button" class="btn btn-dark" >
+                    </button>                    
                 </div>
             </section>  
             <!--Banner-->  
@@ -328,12 +327,40 @@
             <hr/>
 
 <!-- Modal -->
+<!-- Ventana modal, por defecto no visiblel -->
+<div id="login" class="modal">
+    <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+        <form onsubmit="verificar_Mail_Clave(); return false">
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input id="correo" name="correo"
+                    class="form-control" type="email"
+                    placeholder="Correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="palabraSecreta">Contraseña</label>
+                <input id="palabraSecreta" name="palabraSecreta"
+                    class="form-control" type="password"
+                    placeholder="Contraseña">
+            </div>
+            <button class="btn btn-primary" style="margin-top: 10px" >
+                Entrar
+            </button>
+            <br>
+            <a href="#">Contraseña olvidada</a>
+        </form>
+</div>
+  </div>
+
+
+<!--
 <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="loginLabel">Modo de Edición</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button id="btn_Login_Close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
                 <div class="modal-body">
                     <form onsubmit="verificar_Mail_Clave(); return false">
@@ -360,7 +387,7 @@
     </div>
   </div>
 
-
+-->
         </main>
     <!--    <footer class="bg-info text-center text-lg-start fixed-bottom">-->
         <footer class="bg-info text-center">
