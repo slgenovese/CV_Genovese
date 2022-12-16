@@ -90,7 +90,6 @@ function verificar_Mail_Clave(){
     //document.getElementsById('login').style.display="none";
     document.getElementById('btn_Login').innerText="Logout";
     mostrar_Botones();
-    window.removeEventListener('load', graficos,true);
   } 
   return false;
 };
