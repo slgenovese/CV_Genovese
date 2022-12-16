@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head >
         <meta charset="utf-8">
         <title>CV Sergio L. Genovese</title>
         <meta name="description" content="Roughly 155 characters">
@@ -14,7 +14,8 @@
 
 
     </head>
-    <body onload="graficos()"> 
+<!--    <body onload="graficos()" >--> 
+    <body > 
             <!-- Content -->
         <header class="container">
             <!--Redes-->
@@ -41,7 +42,7 @@
                     </button>
                 </div>
                 <div class="col-1">
-                    <button id="btn_Login" onclick="boton_Login()" type="button" class="btn btn-dark" >
+                    <button id="btn_Login" onclick="boton_Login()" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#login">
                     </button>                    
                 </div>
             </section>  
@@ -328,6 +329,7 @@
 
 <!-- Modal -->
 <!-- Ventana modal, por defecto no visiblel -->
+<!--
 <div id="login" class="modal">
     <div class="contenido-modal">
         <span class="cerrar">&times;</span>
@@ -352,9 +354,9 @@
         </form>
 </div>
   </div>
+-->
 
 
-<!--
 <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -363,7 +365,8 @@
           <button id="btn_Login_Close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
                 <div class="modal-body">
-                    <form onsubmit="verificar_Mail_Clave(); return false">
+        <!--            <form onsubmit="verificar_Mail_Clave(); return false">-->
+                    <form onsubmit="verificar_Mail_Clave()">
                         <div class="form-group">
                             <label for="correo">Correo</label>
                             <input id="correo" name="correo"
@@ -387,7 +390,7 @@
     </div>
   </div>
 
--->
+
         </main>
     <!--    <footer class="bg-info text-center text-lg-start fixed-bottom">-->
         <footer class="bg-info text-center">

@@ -56,3 +56,6 @@
     animation-name: animarsuperior;
     animation-duration: 0.5s
   };
+#btn_Login{
+    initial-value: "Login";
+}
