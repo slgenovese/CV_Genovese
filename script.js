@@ -1,9 +1,6 @@
-
-/*window.addEventListener('load', function() {
-  console.log('La página ha terminado de cargarse!!');
-});*/
-window.addEventListener('load', function graficos(){
-// Las etiquetas son las porciones de la gráfica
+  
+ function inicializar(){
+  // Las etiquetas son las porciones de la gráfica
 var etiquetas = ["C/C++", "VB/.Net","Assembler","HTML/CSS/JavaScript"]
 // Podemos tener varios conjuntos de datos. Comencemos con uno
 var titulo ="Lenguajes de Programación"
@@ -47,12 +44,10 @@ var datosIngresos = {
 };
 grafico_Donut(datosIngresos, etiquetas, titulo, "#donut-chart2");
 datos();
-//document.getElementById('btn_Login').innerText="Login"
-let modal=document.getElementById('btn_Login');
-if (document.getElementById('btn_Login').innerText == ''){document.getElementById('btn_Login').innerText="Login"};
-if (document.getElementById('btn_Login').textContent == 'Login'){ ocultar_Botones()};
+document.getElementById('btn_Login').innerText="Login";
+ocultar_Botones();
 iniciar_Lista();
-});
+};
 
 
 
@@ -92,11 +87,12 @@ function verificar_Mail_Clave(){
   var $mail = document.getElementById('correo');
   var $clave = document.getElementById('palabraSecreta');
   if($clave.value=='42247476' && $mail.value=='sgenovese@gmail.com'){
-    //document.getElementById('Login').style.display="none";
-    document.getElementsById('login').style.display="none";
+    //document.getElementsById('login').style.display="none";
     document.getElementById('btn_Login').innerText="Logout";
     mostrar_Botones();
+    window.removeEventListener('load', graficos,true);
   } 
+  return false;
 };
 
 function datos(){

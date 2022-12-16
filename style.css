@@ -56,6 +56,13 @@
     animation-name: animarsuperior;
     animation-duration: 0.5s
   };
-#btn_Login{
-    initial-value: "Login";
-}
+
+  div #btn_Login{
+    display: none;
+ };
+ 
+ div > button:before{
+   display: block;
+   content: Login;
+ }
+ 
