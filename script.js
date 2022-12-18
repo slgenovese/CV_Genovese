@@ -187,12 +187,14 @@ for (i=0;i<4; i++){
 }
 };
 
-function boton_Login(){
+function boton_Login(event){
+  let modal=document.getElementById("login");
   if(document.getElementById('btn_Login').textContent == 'Login'){
-    document.getElementById('login').style.display="block";
-
-    //data-bs-toggle="modal" data-bs-target="#login"
+    modal.style.display="block";
+    //document.getElementById('login').style.display="block";
   }else{
     document.getElementById('btn_Login').innerText="Login";
+    ocultar_Botones();
+    event.preventDefault();
   }
 };
