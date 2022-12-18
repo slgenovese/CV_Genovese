@@ -83,15 +83,19 @@ new Chart ($donut,{
 function popUp(URL) {
   window.open(URL, 'Nombre', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=300,height=200,left = 390,top = 50');
 }
-function verificar_Mail_Clave(){
+function verificar_Mail_Clave(event){
+  event.preventDefault();
   var $mail = document.getElementById('correo');
   var $clave = document.getElementById('palabraSecreta');
   if($clave.value=='42247476' && $mail.value=='sgenovese@gmail.com'){
     //document.getElementsById('login').style.display="none";
     document.getElementById('btn_Login').innerText="Logout";
     mostrar_Botones();
-  } 
-  return false;
+  }
+  let modal =document.getElementById('login');
+  let ventana_Login = bootstrap.Modal.getInstance(modal);
+
+  ventana_Login.hide();
 };
 
 function datos(){
