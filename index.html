@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head >
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CV Sergio L. Genovese</title>
         <meta name="description" content="Roughly 155 characters">
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -25,7 +26,7 @@
                 <div class="col-6"></div>
                 <div class="col-2">
                     <button type="button" class="btn btn-default">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-linkedin  responsive" viewBox="0 0 16 16">
                             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                         </svg>
                     </button>
@@ -49,14 +50,14 @@
             <!--Banner-->  
             <section class="row" >
                 <div class="col-12" style="height: 500px"  >
-                    <img src="Banner.png"  style="margin-top: 0px" />
+                    <img src="Banner.png"  style="margin-top: 0px" class="responsive"/>
                     <button type="button" class="btn btn-default" id="btnEdicion_0" style="margin-top: -870px">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="White" class="bi bi-camera-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                             <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
                         </svg>
                     </button>
-                    <img src="Foto_Fondo_Gris.png" class="rounded-circle" style="margin-top: -110px;margin-left: 50px;"/>
+                    <img src="Foto_Fondo_Gris.png" class="rounded-circle " style="margin-top: -110px;margin-left: 50px;" />
                     <button type="button" class="btn btn-default" id="btnEdicion_1" style="margin-top: -70px;margin-left: -40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
                             <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -69,13 +70,15 @@
         </header>
 
 
-        <main class="container">
+        <main class="container responsive">
             <!-- Acerca de-->
             <section class="row">
                 <div class="col-4">
-                    <h4 style="margin-top:20px; margin-left: 30px; "><b>Sergio Lorenzo Genovese</b></h4><br><br>
-                    <p style="margin-top:-30px; margin-left: 30px; font-size: medium;">Responsable de Area de Sistemas de Información en el Ministerio de Salud de la Nación</p>
-                    <p style="margin-top: -10px; margin-left: 30px; font-size: small;">Buenos Aires (Argentina)</p>
+                    <h4 ><b>Sergio Lorenzo Genovese</b></h4><br><br>
+                    <p >Responsable de Area de Sistemas de Información en el Ministerio de Salud de la Nación</p>
+                    <p >Buenos Aires (Argentina)</p>
+                <!--     <p style="margin-top:-30px; margin-left: 30px; font-size: medium;">Responsable de Area de Sistemas de Información en el Ministerio de Salud de la Nación</p>
+                    <p style="margin-top: -10px; margin-left: 30px; font-size: small;">Buenos Aires (Argentina)</p>-->
                 </div>
                 <div class="col-2">
                     <button type="button" class="btn btn-default" id="btnEdicion_2">
@@ -86,12 +89,12 @@
                 </div>
                 <div class="col-4"></div>
                 <div class="col-2">
-                    <img src="Msal.png" style="margin-top: 70px"/>
+                    <img src="Msal.png" style="margin-top: 70px" class="responsive"/>
                 </div>
                 <hr/>
                 <h4>Acerca de</h4>
                 <div class="col-10">
-                    <p id="acerca_De"></p>
+                    <p id="acerca_De" ></p>
                 </div>
                 <div class="col-2">
                     <button type="button" class="btn btn-default" id="btnEdicion_3">
@@ -113,8 +116,8 @@
             <!-- Experiencia-->
             <h4 class="subtitulo">Experiencia</h4>
             <section class="row">
-                <div class="col-2">
-                        <img id="exp_imagen_0" /> 
+                <div class="col-1">
+                        <img id="exp_imagen_0" class="responsive"/> 
                 </div> 
                 <div class="col-8" >
                         <article id="exp_texto_0" class="article_Experiencia"></article>
@@ -137,8 +140,8 @@
             <div class="col-12" id="separador"></div>
 
             <section class="row">
-                <div class="col-2">
-                    <img id="exp_imagen_1" />
+                <div class="col-1">
+                    <img id="exp_imagen_1" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="exp_texto_1" class="article_Experiencia"></article>
@@ -161,8 +164,8 @@
                 <div class="col-12" id="separador"></div>
 
             <section class="row">
-                <div class="col-2">
-                    <img id="exp_imagen_2"/>
+                <div class="col-1">
+                    <img id="exp_imagen_2" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="exp_texto_2" class="article_Experiencia"></article>
@@ -185,8 +188,8 @@
                 <div class="col-12" id="separador"></div>
 
             <section class="row">
-                <div class="col-2">
-                    <img id="exp_imagen_3" />
+                <div class="col-1">
+                    <img id="exp_imagen_3" class="imagen responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="exp_texto_3" class="article_Experiencia"></article>
@@ -211,8 +214,8 @@
             <!-- Educacion-->
             <h4 class="subtitulo">Educación</h4>
             <section class="row">
-                <div class="col-2">
-                    <img id="edu_imagen_0" />
+                <div class="col-1">
+                    <img id="edu_imagen_0" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="edu_texto_0" class="article_Educacion"></article>
@@ -235,8 +238,8 @@
                 <div class="col-12" id="separador"></div>
 
             <section class="row">
-                <div class="col-2">
-                    <img id="edu_imagen_1"/>
+                <div class="col-1">
+                    <img id="edu_imagen_1" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="edu_texto_1" class="article_Educacion"></article>
@@ -259,8 +262,8 @@
                 <div class="col-12" id="separador"></div>
 
                 <section class="row">
-                    <div class="col-2">
-                    <img id="edu_imagen_2"/>
+                    <div class="col-1">
+                    <img id="edu_imagen_2" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="edu_texto_2" class="article_Educacion"></article>
@@ -283,8 +286,8 @@
                 <div class="col-12" id="separador"></div>
 
             <section class="row">
-                <div class="col-2">
-                    <img id="edu_imagen_3"/>
+                <div class="col-1">
+                    <img id="edu_imagen_3" class="responsive"/>
                 </div> 
                 <div class="col-8">
                     <article id="edu_texto_3" class="article_Educacion"></article>

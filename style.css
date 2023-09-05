@@ -1,4 +1,21 @@
 
+* {
+    box-sizing: border-box;
+  }
+
+* {
+    font-size: 1vw;
+}
+/*
+.imagen{
+    max-height: height 10px;
+    max-width: width 10px;
+}  
+*/
+.responsive {
+    width: 100%;
+    height:auto;  
+  }  
 
 .font_Redes{
     font-size: small;
