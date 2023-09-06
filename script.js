@@ -98,6 +98,13 @@ function verificar_Mail_Clave(event){
   ventana_Login.hide();
 };
 
+function cerrar_modal(){
+  let modal =document.getElementById('login');
+  let ventana_Login = bootstrap.Modal.getInstance(modal);
+
+  ventana_Login.hide();
+}
+
 function datos(){
   var acerca_De ="Técnico Universitario en Automatización y Control, Informático, Docente, MCP, CCNA, Full Stack Developer Jr.";
   var $acerca_De =document.getElementById('acerca_De');
