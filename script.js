@@ -92,17 +92,14 @@ function verificar_Mail_Clave(event){
     document.getElementById('btn_Login').innerText="Logout";
     mostrar_Botones();
   }
-  let modal =document.getElementById('login');
-  let ventana_Login = bootstrap.Modal.getInstance(modal);
 
-  ventana_Login.hide();
+  let modal =document.getElementById('login');
+  modal.style.display="none";
 };
 
 function cerrar_modal(){
   let modal =document.getElementById('login');
-  let ventana_Login = bootstrap.Modal.getInstance(modal);
-
-  ventana_Login.hide();
+  modal.style.display="none";
 }
 
 function datos(){
